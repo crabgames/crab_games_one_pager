@@ -79,18 +79,25 @@ Eliminations → prize: Confiscated CRBH is swapped to USDC and tracked on-chain
 
 Claims: Survivors claim directly from the controller. If you miss the window, funds are swept to treasury (transparent).
 
-Play/Vote fees: Forwarded to the treasury; they don't fund the prize pool.
+Play/Vote fees: Forwarded to the treasury.
 
-Relevant tokenomics
-- Supply: 1,000,000,000,000 CRBH (fixed)
-- Buy tax: 5% max (current: 5%)
-- Sell tax: 20% max (current: 20%)
-- Auto-register minimum stake (controller): default 1,000,000 CRBH
- - Weighting: Inverse (sqrt). Smaller = higher elim weight; whales never 0. Cap > 5,000,000 CRBH.
+Tokenomics — CRBH Supply
 
-Burn mechanics 
-- Buys: 5% of the trade is burned.
-- Sells: 20% total tax → 10% burned + 10% sent to treasury (in CRBH).
+Total Supply: 1,000,000,000,000 CRBH (fixed, no minting)
+
+Liquidity (40%) — locked into the CRBH/USDC pool at launch
+
+Treasury (10%) — for dev, ops, audits, infra (multisig-controlled, renounceable)
+
+Airdrops & Community (50%) — seasonal rewards, referral bounties, onboarding
+
+On-chain mechanics:
+
+Buy tax: 5% → burn
+
+Sell tax: 20% split = 10% burn + 10% treasury
+
+No insiders, no mint, no blacklist.
 - Treasury CRBH is held (not auto-LP); ops can add LP later when desired.
 
 Treasury options (ops-managed): ETH from fees and CRBH from taxes can be paired to top up liquidity, or ETH can be used to buy CRBH and burn. We have flexible tools, so we don't need constant sells to fund operations. Transfer locks on active players also help ease sell pressure during a season.
